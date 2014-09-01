@@ -15,6 +15,7 @@ public class OttoIBus implements IBus {
         this.bus = bus;
     }
     
+    @Override
     public void post(Object event) {
         bus.post(event);
     }

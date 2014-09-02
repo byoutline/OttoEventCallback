@@ -8,7 +8,8 @@ import com.squareup.otto.Bus;
 import com.squareup.otto.ThreadEnforcer;
 
 /**
- *
+ * Wraps {@link Bus} it so it implements {@link IBus} and always posts on
+ * Android main thread.
  */
 public class PostFromAnyThreadBus extends Bus implements IBus {
 

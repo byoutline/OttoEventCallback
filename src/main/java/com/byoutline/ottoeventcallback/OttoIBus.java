@@ -20,4 +20,8 @@ public class OttoIBus implements IBus {
     public void post(Object event) {
         bus.post(event);
     }
+    
+    public void register(Object object) {
+        bus.register(object);
+    }
 }

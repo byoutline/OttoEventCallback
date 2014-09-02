@@ -1,6 +1,5 @@
 package com.byoutline.ottoeventcallback;
 
-
 import com.byoutline.eventcallback.IBus;
 import com.squareup.otto.Bus;
 
@@ -9,13 +8,13 @@ import com.squareup.otto.Bus;
  * Android main thread.
  */
 public class PostFromAnyThreadIBus implements IBus {
-
+    
     private final Bus bus;
-
+    
     public PostFromAnyThreadIBus(Bus bus) {
         this.bus = bus;
     }
-
+    
     @Override
     public void post(final Object event) {
         PostFromAnyThreadBus.runInMainThread(new Runnable() {
@@ -25,5 +24,9 @@ public class PostFromAnyThreadIBus implements IBus {
                 bus.post(event);
             }
         });
+    }
+    
+    public void register(Object object) {
+        bus.register(object);
     }
 }

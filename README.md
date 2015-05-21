@@ -98,3 +98,4 @@ OttoIBus              | Yes                           | No
 PostFromAnyThreadBus  | No                            | Yes
 PostFromAnyThreadIBus | Yes                           | Yes
 
+Note: Recent Otto releases use ThreadEnforcer.MAIN by default, so wrapping them in PostFromAnyThread* class is redundant.

@@ -87,15 +87,16 @@ MyEventCallback.<UserResponse>builder()
 Available bus wrappers
 ----------------------
 
-Depending on your application different Bus wrappers may be most suitable. If you use default ```Bus``` instance use ```OttoBus``` or ```PostFromAnyThreadBus```. If you initiated bus elsewhare or you have your custom ```Bus``` implmentation ```..IBus``` classes may be better chocie. 
+Depending on your application different Bus wrappers may be most suitable. If you use default ```Bus``` instance use ```OttoBus``` or ```PostFromAnyThreadBus```. If you initiated bus elsewhare or you have your custom ```Bus``` implementation ```..IBus``` classes may be better chocie. 
 
 If you use events mainly to update UI state ```PostFromAnyThread...``` classes will be more convenient.
 
-Class name            | requires passing bus instance | forces posting on android main thread
+Class name            | requires passing bus instance | ensures that event is posted on android main thread
 ----------------------|-------------------------------|--------------------------------------
 OttoBus               | No                            | No
 OttoIBus              | Yes                           | No
 PostFromAnyThreadBus  | No                            | Yes
 PostFromAnyThreadIBus | Yes                           | Yes
 
-Note: Recent Otto releases use ThreadEnforcer.MAIN by default, so wrapping them in PostFromAnyThread* class is redundant.
+By default Otto uses ThreadEnforcer.MAIN witch will crash if you try to post event from different thread.
+

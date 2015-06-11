@@ -98,5 +98,5 @@ OttoIBus              | Yes                           | No
 PostFromAnyThreadBus  | No                            | Yes
 PostFromAnyThreadIBus | Yes                           | Yes
 
-By default Otto uses ThreadEnforcer.MAIN witch will crash if you try to post event from different thread.
+By default Otto uses ThreadEnforcer.MAIN which will crash if you try to post event from different thread.
 

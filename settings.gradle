@@ -1,1 +1,2 @@
+include ':ottoeventcallback-api'
 rootProject.name = 'OttoEventCallback'

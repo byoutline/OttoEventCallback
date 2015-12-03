@@ -11,8 +11,8 @@ How to use
 Add to your ```build.gradle```:
 ```groovy
 dependencies {
- compile 'com.byoutline.ottoeventcallback:ottoeventcallback:1.2.5'
- compile 'com.byoutline.eventcallback:eventcallback:1.3.0' # If you want to force specific version of EventCallback
+ compile 'com.byoutline.ottoeventcallback:ottoeventcallback:1.3.1'
+ compile 'com.byoutline.eventcallback:eventcallback:1.3.2' # Optional: add if you want to force specific version of EventCallback
 }
 ```
 

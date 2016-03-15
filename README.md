@@ -11,7 +11,7 @@ How to use
 Add to your ```build.gradle```:
 ```groovy
 dependencies {
- compile 'com.byoutline.ottoeventcallback:ottoeventcallback:1.3.1'
+ compile 'com.byoutline.ottoeventcallback:ottoeventcallback:1.3.2'
  compile 'com.byoutline.eventcallback:eventcallback:1.3.2' # Optional: add if you want to force specific version of EventCallback
 }
 ```
@@ -99,4 +99,7 @@ PostFromAnyThreadBus  | No                            | Yes
 PostFromAnyThreadIBus | Yes                           | Yes
 
 By default Otto uses ThreadEnforcer.MAIN which will crash if you try to post event from different thread.
-
+You can use `PostFromAnyThreadBus` and `PostFromAnyThreadIBus` without including rest of event callback by adding dependency:
+```groovy
+compile 'com.byoutline.ottoeventcallback:anythreadbus:1.0.0'
+```

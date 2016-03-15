@@ -1,2 +1,4 @@
-include ':ottoeventcallback-api'
+include ':ottoeventcallback-api', 'anythreadbus'
 rootProject.name = 'OttoEventCallback'
+include 'ottoeventcallback'
+

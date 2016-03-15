@@ -2,7 +2,6 @@ package com.byoutline.ottoeventcallback;
 
 import android.os.Handler;
 import android.os.Looper;
-
 import com.byoutline.eventcallback.IBus;
 import com.squareup.otto.Bus;
 import com.squareup.otto.ThreadEnforcer;

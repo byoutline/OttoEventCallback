@@ -99,4 +99,7 @@ PostFromAnyThreadBus  | No                            | Yes
 PostFromAnyThreadIBus | Yes                           | Yes
 
 By default Otto uses ThreadEnforcer.MAIN which will crash if you try to post event from different thread.
-
+You can use `PostFromAnyThreadBus` and `PostFromAnyThreadIBus` without including rest of event callback by adding dependency:
+```groovy
+compile 'com.byoutline.ottoeventcallback:anythreadbus:1.0.0'
+```
